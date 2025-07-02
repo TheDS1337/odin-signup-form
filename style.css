@@ -8,7 +8,6 @@
 }
 
 :root {
-    /* Division by 2, just so that I can comfortable see it in my small screen */
     --body-width: 1440px;           /* exact */
     --body-height: 1024px;          /* exact */
     --side-width: 535px;            /* exact */
@@ -36,7 +35,8 @@ body {
     box-sizing: border-box;
     background-image: url("images/unsplash.jpg");
     background-repeat: no-repeat;
-    background-size: var(--side-width) var(--body-height);
+    background-size: cover;
+    background-position: center;
     width: var(--side-width);
     height: var(--body-height);
     text-align: center;
@@ -65,7 +65,7 @@ body {
     opacity: 0.75;
 }
 
-#footer a {
+#footer > a {
     color: inherit;
 }
 
