@@ -8,17 +8,10 @@
 }
 
 :root {
-    --body-width: 1440px;           /* exact */
-    --body-height: 1024px;          /* exact */
-    --side-width: 535px;            /* exact */
+    --body-width: 1440px;
+    --body-height: 1024px;
+    --side-width: 535px;
     --form-width: calc(var(--body-width) - var(--side-width));
-
-    --logo-width: 18%;              /* eyeballed */
-    --logo-font-size: 6rem;         /* eyeballed */             
-    --side-padding-top: 225px;      /* exact */
-    --side-padding-bottom: 15px;    /* exact */
-
-    --footer-font-size: 0.85rem;    /* eyeballed */
 }
 
 body {
@@ -32,8 +25,8 @@ body {
 
 #section-logo {
     color: white;
-    padding-top: var(--side-padding-top);
-    padding-bottom: var(--side-padding-bottom);   
+    padding-top: 225px;
+    padding-bottom: 15px;   
     box-sizing: border-box;
     background-image: url("images/unsplash.jpg");
     background-repeat: no-repeat;
@@ -56,16 +49,16 @@ body {
 }
 
 #header > img {
-    width: var(--logo-width);
+    width: 18%;
 }
 
 #header > div {
     font-family: "norsebold", sans-serif;
-    font-size: var(--logo-font-size);
+    font-size: 6rem;
 }
 
 #footer {
-    font-size: var(--footer-font-size);
+    font-size: 0.85rem;
     opacity: 0.6;
 }
 
@@ -74,6 +67,7 @@ body {
 }
 
 #section-form {
+    font-weight: 700;
     width: var(--form-width);
     height: var(--body-height);
     background-color: white;
@@ -90,6 +84,7 @@ body {
 #form-top {
     padding-top: 170px;
     padding-bottom: 64px;
+    box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.02);
 }
 
 #form-top p:first-of-type {
@@ -102,22 +97,38 @@ body {
 
 #form-top > p, #form-inputs > p {
     font-size: 1.4rem;
-    font-weight: 700;
 }
 
 #form-inputs {
     padding-top: 25px;
     padding-bottom: 40px;
-    box-shadow: 5px 5px 25px black;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 #inputs {
+    font-size: 0.8rem;
+    color: grey;
     display: flex;
     gap: 75px;
 }
 
-#inputs > div {
+.input-content {
     width: 260px;
+    height: 30px;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+}
+
+.input-content:focus, .input-content:active {
+    border-color: blue;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.input-content:invalid {
+    border-color: red;
+}
+
+#inputs > div {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -131,4 +142,20 @@ body {
 #form-submit {
     padding-top: 30px;
     padding-bottom: 220px;
+}
+
+#form-submit > button {
+    padding: 20px 55px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    background-color: #596D48;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+#form-submit strong {
+    color: #596D48;
 }
